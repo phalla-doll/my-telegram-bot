@@ -5,6 +5,13 @@ import { Update } from 'typescript-telegram-bot-api/dist/types';
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot({ botToken: token ? token : '' });
 
+bot.on('message', async (msg) => {
+  const chatId = msg.chat.id;
+  if (msg.text) {
+    await bot.sendMessage({ chat_id: chatId, text: msg.text });
+  }
+});
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
