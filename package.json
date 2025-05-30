@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "next": "15.3.3",
-    "node-telegram-bot-api": "^0.66.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "typescript-telegram-bot-api": "^0.8.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
