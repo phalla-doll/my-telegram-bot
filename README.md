@@ -65,7 +65,7 @@ Once you have a public URL (e.g., `https://your-ngrok-url.io`), you need to tell
 You can set the webhook using a `curl` command or by visiting the URL in your browser (replace `<YOUR_BOT_TOKEN>` and `<YOUR_WEBHOOK_URL>`):
 
 ```bash
-curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=<YOUR_WEBHOOK_URL>/api/bot"
+curl "https://api.telegram.org/bot7308943227:AAG7pqXdOexeGRzKzEHYw4tiX2stOc2Vhpw/setWebhook?url=<YOUR_WEBHOOK_URL>/api/bot"
 ```
 
 ## Bot Logic
@@ -84,12 +84,12 @@ The easiest way to deploy your Next.js Telegram bot is to use the [Vercel Platfo
     In your Vercel project settings, add your `TELEGRAM_BOT_TOKEN` as an environment variable.
 4.  **Deploy!** Vercel will automatically build and deploy your Next.js application.
 5.  **Set your Telegram Bot Webhook:**
-    Once deployed, Vercel will provide you with a production URL (e.g., `https://your-project-name.vercel.app`). Use this URL to set your Telegram bot's webhook:
+    Once deployed, Vercel will provide you with a production URL (e.g., `https://my-telegram-bot-jgqr.vercel.app`). Use this URL to set your Telegram bot's webhook:
 
     ```bash
-    curl "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook?url=https://your-project-name.vercel.app/api/bot"
+    curl "https://api.telegram.org/bot7308943227:AAG7pqXdOexeGRzKzEHYw4tiX2stOc2Vhpw/setWebhook?url=https://my-telegram-bot-jgqr.vercel.app/api/bot"
     ```
-    Make sure to replace `<YOUR_BOT_TOKEN>` and `https://your-project-name.vercel.app` with your actual bot token and Vercel deployment URL.
+    Make sure to replace `<YOUR_BOT_TOKEN>` and `https://my-telegram-bot-jgqr.vercel.app` with your actual bot token and Vercel deployment URL.
 
 ## Learn More about Next.js
 
@@ -97,5 +97,6 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Typescript Telegram Bot API Documentation](https://github.com/Borodin/typescript-telegram-bot-api) - Documentation for Telegram Bot API implementation
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
