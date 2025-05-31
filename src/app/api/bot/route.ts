@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
 
       await bot.sendMessage({
         chat_id: chatId,
-        text: "You used /new! Please choose an option:",
+        text: "សួស្ដី!​ គិតតម្លៃទឹកភ្លើងរបស់អ្នក - ជ្រើសររើសនិងបំពេញព័ត៌មានខាងក្រោម",
         reply_markup: {
           inline_keyboard: [
             // Each inner array represents a row of buttons
@@ -100,18 +100,18 @@ export async function POST(req: NextRequest) {
         if (data === "previous_electrical_value") {
           updatedState.expecting = 'previous';
           chatStates.set(chatId, updatedState);
-          await bot.sendMessage({ chat_id: chatId, text: "Please enter the previous electrical value (numbers only):" });
+          await bot.sendMessage({ chat_id: chatId, text: "សូមបំពេញតម្លៃភ្លើងចាស់:" });
         } else if (data === "current_electrical_value") {
           updatedState.expecting = 'current';
           chatStates.set(chatId, updatedState);
-          await bot.sendMessage({ chat_id: chatId, text: "Please enter the current electrical value (numbers only):" });
+          await bot.sendMessage({ chat_id: chatId, text: "សូមបំពេញតម្លៃភ្លើងថ្មី:" });
         } else if (data === "price_electrical_value") {
           // This button directly sets the expectation for price,
           // useful if users want to set price independently or re-set it.
           // For the main flow, price is asked after previous/current are given.
           updatedState.expecting = 'price';
           chatStates.set(chatId, updatedState);
-          await bot.sendMessage({ chat_id: chatId, text: "Please enter the price per kWh (numbers only):" });
+          await bot.sendMessage({ chat_id: chatId, text: "សូមបំពេញតម្លៃភ្លើងក្នុង 1គីឡូវវ៉ាត់ម៉ោង (kWh):" });
         } else {
           await bot.sendMessage({ chat_id: chatId, text: `Processed action: ${data}` });
         }
